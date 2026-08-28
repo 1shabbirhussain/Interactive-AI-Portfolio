@@ -21,7 +21,9 @@ export function InteractiveTerminal({ onOpenAI }: { onOpenAI: () => void }) {
   const terminalEndRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (history.length > 1) {
+      terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
   }, [history]);
 
   const executeCommand = (cmd: string) => {
