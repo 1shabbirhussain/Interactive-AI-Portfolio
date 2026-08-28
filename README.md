@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Shabbir Hussain — AI-Powered Mobile Architect Portfolio
 
-## Getting Started
+> **Senior Flutter Engineer & Cross-Platform Mobile Architect**  
+> Architected high-scale ecosystems (299+ production apps from 1 codebase) & applied AI systems.  
+> 🌐 **Live Portfolio:** [https://shabbirhussain.vercel.app](https://shabbirhussain.vercel.app)
 
-First, run the development server:
+---
 
+## 🌟 Highlights & Key Differentiators
+
+- **299+ Production Apps from 1 Codebase**: Architected the multi-flavor white-label platform for *Linked Union* (Avialdo Solutions) using BLoC & Fastlane CI/CD automation.
+- **Enterprise Native-to-Flutter Migration**: Leading seamless module migrations at *F-Tech Solution* with zero downtime.
+- **Integrated Ultra-Fast AI Digital Representative**: Streaming AI persona powered by Groq LLM inference (`qwen3.8-27b` / `llama-3.3-70b`) responding at 800+ tokens/second.
+- **Interactive Developer Experience**: Integrated interactive terminal (CLI), `Cmd+K` command palette, certificate lightbox zoom, celebration confetti on resume download, and glassmorphic micro-interactions.
+- **Academic Distinction**: BS in Software Engineering from UBIT, University of Karachi (Distinction, CGPA 3.5/4.0) & Saylani Devathon Summit 1.0 Winner (Top 10 of 70 teams).
+
+---
+
+## 📸 Screenshots
+
+| Homepage & Constellation Effect | AI Assistant Panel |
+| :---: | :---: |
+| ![Homepage](public/screenshots/homepage.png) | ![AI Assistant](public/screenshots/chat_agent.png) |
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+|---|---|
+| **Framework** | Next.js 15 (App Router), React 19, TypeScript |
+| **Styling & UI** | Tailwind CSS v4, Custom Cyber Glassmorphism, Neon Glow Utilities |
+| **Motion & Canvas** | Framer Motion (Motion), HTML5 Canvas Constellation Particle System, Canvas Confetti |
+| **AI Layer** | Groq SDK (`groq-sdk`), Google Generative AI (`@google/generative-ai`), SSE Streaming |
+| **Icons & Typography** | Lucide React, Custom Vector SVGs, Geist / Inter typography |
+| **Deployment** | Vercel Edge Serverless Architecture (100% Free Tier) |
+
+---
+
+## 🚀 Quick Start (Local Development)
+
+### 1. Clone or Open the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd /Users/macminim2/.gemini/antigravity/scratch/portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Configure Environment Variables
+Create a `.env.local` file in the root directory:
+```env
+# Groq API Key (Free tier at https://console.groq.com/keys)
+GROQ_API_KEY=your_groq_api_key_here
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Optional Gemini API Key fallback (Free at https://aistudio.google.com/app/apikey)
+GEMINI_API_KEY=your_gemini_key_here
 
-## Learn More
+# Site URL for canonical OpenGraph tags
+NEXT_PUBLIC_SITE_URL=https://shabbirhussain.vercel.app
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📦 How to Update Portfolio Content & AI Knowledge
 
-## Deploy on Vercel
+All portfolio content and AI knowledge are decoupled from the UI:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Portfolio Information & Projects**:
+   - Edit [`src/data/portfolio.ts`](src/data/portfolio.ts) to update personal bio, projects, metrics, skills, job history, and certificates.
+2. **AI Assistant Directives & Knowledge**:
+   - Edit [`src/data/knowledge.ts`](src/data/knowledge.ts) to add or modify rules, career highlights, and Q&A context for the AI representative.
+3. **Assets & Screenshots**:
+   - Place images in `public/assets/projects/`, `public/assets/profile/`, or `public/assets/certificates/`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🌐 Deploying to Vercel (100% Free Forever)
+
+1. Push your repository to GitHub:
+   ```bash
+   git add .
+   git commit -m "feat: complete AI-powered portfolio website"
+   git branch -M main
+   git remote add origin https://github.com/1shabbirhussain/<your-repo-name>.git
+   git push -u origin main
+   ```
+2. Go to [Vercel Dashboard](https://vercel.com/new).
+3. Import your GitHub repository.
+4. Under **Environment Variables**, add:
+   - `GROQ_API_KEY` = `your_groq_api_key_here`
+   - `NEXT_PUBLIC_SITE_URL` = `https://shabbirhussain.vercel.app`
+5. Click **Deploy**. Vercel will build and deploy your site in ~30 seconds.
+
+---
+
+## 📬 Contact & Connect
+
+- **Email**: [001.shabbirhussain@gmail.com](mailto:001.shabbirhussain@gmail.com)
+- **WhatsApp / Phone**: [+92-347-8356631](https://wa.me/923478356631)
+- **LinkedIn**: [linkedin.com/in/shabbir-hussain-445338228](https://www.linkedin.com/in/shabbir-hussain-445338228)
+- **GitHub**: [github.com/1shabbirhussain](https://github.com/1shabbirhussain)
+
+---
+
+*© 2026 Shabbir Hussain. Built with Next.js 15, Framer Motion, and Groq AI.*
