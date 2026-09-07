@@ -12,6 +12,7 @@ export function ContactSection() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [sending, setSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleCopyEmail = async () => {
     await copyToClipboard(PORTFOLIO_DATA.personal.email);
@@ -19,21 +20,34 @@ export function ContactSection() {
     setTimeout(() => setCopiedEmail(false), 2500);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
     setSending(true);
-    setTimeout(() => {
+    setErrorMsg('');
+    
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await res.json();
+      
+      if (!res.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
       setSending(false);
       setSubmitted(true);
       confetti({ particleCount: 80, spread: 70 });
-      window.location.href = `mailto:${PORTFOLIO_DATA.personal.email}?subject=Inquiry from ${encodeURIComponent(
-        formData.name
-      )}&body=${encodeURIComponent(
-        `Hi Shabbir,\n\n${formData.message}\n\nFrom: ${formData.name} (${formData.email})`
-      )}`;
-    }, 600);
+      setFormData({ name: '', email: '', message: '' });
+    } catch (err: any) {
+      setSending(false);
+      setErrorMsg(err.message || 'An error occurred. Please try again.');
+    }
   };
 
   return (
@@ -160,14 +174,20 @@ export function ContactSection() {
               <Sparkles className="h-5 w-5 text-cyan-400" />
             </div>
 
+            {errorMsg && (
+              <div className="px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
+                {errorMsg}
+              </div>
+            )}
+
             {submitted ? (
               <div className="py-12 text-center space-y-3">
                 <div className="h-12 w-12 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto">
                   <Check className="h-6 w-6" />
                 </div>
-                <h4 className="text-xl font-bold text-white">Message Prepared!</h4>
+                <h4 className="text-xl font-bold text-white">Message Sent Successfully!</h4>
                 <p className="text-sm text-slate-400 max-w-sm mx-auto">
-                  Your email client has been opened with your message. You can also reach Shabbir directly on WhatsApp at +92-347-8356631.
+                  Your direct message has been securely delivered. Shabbir will get back to you shortly. You can also reach him on WhatsApp at +92-347-8356631.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
