@@ -31,7 +31,7 @@ export function ProjectsGallery() {
           <span className="text-gradient-cyan">Flagship Case Studies</span>
         </h2>
         <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-          Real production mobile platforms serving hundreds of thousands of users across Google Play & Apple App Store.
+          High-scale production mobile platforms, full-stack systems, and applied AI applications serving hundreds of thousands of users.
         </p>
       </div>
 

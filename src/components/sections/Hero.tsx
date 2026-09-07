@@ -14,10 +14,11 @@ interface HeroProps {
 
 export function Hero({ onOpenAI }: HeroProps) {
   const roles = [
+    "Full-Stack Web, Mobile & Desktop Architect",
     "299+ Production Apps from 1 Codebase",
-    "Enterprise Native-to-Flutter Migration",
-    "Applied AI & Groq LLM Integrations",
-    "Scalable BLoC & Fastlane CI/CD Pipelines"
+    "High-Performance Cloud & Backend Systems",
+    "Enterprise Native-to-Flutter Modernization",
+    "Applied AI & High-Speed LLM Integrations"
   ];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
 
@@ -98,7 +99,7 @@ export function Hero({ onOpenAI }: HeroProps) {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal"
             >
-              Architected a white-label mobile engine deploying <strong className="text-slate-100 font-semibold">299 production apps from 1 codebase</strong>, leading enterprise native-to-Flutter migrations with zero downtime, and engineering high-speed applied AI integrations.
+              Architected a white-label mobile engine deploying <strong className="text-slate-100 font-semibold">299 production apps from 1 codebase</strong>, leading enterprise native-to-Flutter migrations with zero downtime, and building custom production systems across <strong className="text-slate-100 font-semibold">Mobile, Full-Stack Web, Desktop & Cloud</strong>.
             </motion.p>
 
             {/* Action Buttons */}
@@ -123,7 +124,7 @@ export function Hero({ onOpenAI }: HeroProps) {
                 <Bot className="h-4 w-4 text-cyan-400" />
                 <span>Talk to My AI</span>
                 <span className="px-1.5 py-0.5 rounded text-[10px] bg-cyan-500/20 text-cyan-300 font-mono">
-                  Llama 3.3
+                  AI Agent
                 </span>
               </button>
 
@@ -207,7 +208,7 @@ export function Hero({ onOpenAI }: HeroProps) {
                     <span className="text-cyan-400 text-[10px]">CGPA 3.5 Distinction</span>
                   </div>
                   <div className="text-[11px] text-slate-400 mt-0.5">
-                    Lead Mobile & Flutter Architect
+                    Senior Full-Stack & Mobile Architect
                   </div>
                 </div>
               </div>
@@ -228,7 +229,7 @@ export function Hero({ onOpenAI }: HeroProps) {
                 className="absolute top-1/2 -right-8 px-3 py-2 rounded-xl bg-slate-900/90 border border-purple-500/30 backdrop-blur-md shadow-lg flex items-center gap-2 text-xs font-mono text-purple-300"
               >
                 <Zap className="h-4 w-4 text-purple-400" />
-                <span>Applied AI / Groq</span>
+                <span>Full-Stack & Applied AI</span>
               </motion.div>
 
               <motion.div

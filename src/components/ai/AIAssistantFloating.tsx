@@ -27,7 +27,7 @@ export function AIAssistantFloating({ onOpen }: { onOpen: () => void }) {
               <Sparkles className="h-3 w-3 text-cyan-400 animate-pulse" />
             </div>
             <div className="text-[10px] text-slate-400 font-mono">
-              Groq Llama 3.3 Powered
+              Groq AI Agent Powered
             </div>
           </div>
         </div>

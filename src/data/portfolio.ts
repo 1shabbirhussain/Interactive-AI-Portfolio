@@ -53,9 +53,9 @@ export interface Certificate {
 export const PORTFOLIO_DATA = {
   personal: {
     name: "Shabbir Hussain",
-    title: "Senior Flutter Engineer & Mobile Architect",
-    tagline: "Architecting high-scale cross-platform mobile ecosystems (299+ production apps from 1 codebase) & applied AI systems.",
-    shortBio: "Senior Flutter Engineer with 3+ years of battle-tested experience shipping production applications to Google Play and Apple App Store. Specialist in scalable mobile architecture (BLoC, Clean Architecture), multi-flavor white-label engines, Fastlane CI/CD automation, and applied LLM integrations.",
+    title: "Senior Full-Stack & Cross-Platform Engineer | Mobile & Systems Architect",
+    tagline: "Architecting end-to-end digital solutions — from 299+ production mobile apps to full-stack web platforms, desktop software, and applied AI systems.",
+    shortBio: "Versatile Senior Engineer and Product Architect with 3+ years of production experience shipping high-scale software across Mobile (iOS & Android), Full-Stack Web (Next.js, React, TypeScript, Node.js, Python), Desktop (Flutter Desktop), and Cloud Infrastructure. Renowned for engineering a 299-app single-codebase white-label engine at Avialdo and modernizing enterprise mobile suites at F-Tech. Whether you need a cross-platform mobile app, an enterprise web application, desktop software, or a complete custom system, Shabbir delivers production-ready excellence from idea to deployment.",
     location: "Karachi, Pakistan (Open to Remote & Global Relocation)",
     phone: "+92-347-8356631",
     email: "001.shabbirhussain@gmail.com",
@@ -67,7 +67,7 @@ export const PORTFOLIO_DATA = {
       "/assets/profile/self3.png"
     ],
     resumePdf: "/assets/docs/resume.pdf",
-    availability: "Available for Senior Mobile / Flutter Roles & High-Impact Contracts",
+    availability: "Available for Senior Full-Stack / Mobile Roles & Custom System Contracts (Mobile, Web, Desktop, Cloud)",
     socials: {
       github: "https://github.com/1shabbirhussain",
       linkedin: "https://www.linkedin.com/in/shabbir-hussain-445338228",
@@ -80,7 +80,7 @@ export const PORTFOLIO_DATA = {
 
   stats: [
     { label: "Production Apps Shipped", value: "299+", suffix: "", desc: "From a single unified Flutter codebase" },
-    { label: "Years Experience", value: "3+", suffix: "", desc: "Cross-platform mobile & scalable architecture" },
+    { label: "Years Experience", value: "3+", suffix: "", desc: "Cross-platform, web & scalable systems engineering" },
     { label: "Active Users Served", value: "100K+", suffix: "", desc: "Across US labor unions & e-commerce" },
     { label: "Production Crash-Free Rate", value: "99.9%", suffix: "", desc: "Monitored via DataDog & Firebase" }
   ],
@@ -287,59 +287,62 @@ export const PORTFOLIO_DATA = {
 
   skillCategories: [
     {
-      name: "Core Mobile & Frameworks",
-      description: "Primary languages and UI toolkits for production-grade cross-platform applications.",
+      name: "Cross-Platform & Mobile (Core Specialty)",
+      description: "Primary frameworks, reactive patterns, and native bridges for high-concurrency production apps.",
       skills: [
-        { name: "Flutter", level: "Expert", note: "3+ Years, 299+ Apps" },
-        { name: "Dart", level: "Expert", note: "Async, Streams, Generics" },
+        { name: "Flutter", level: "Expert", note: "3+ Years, 299+ Apps Shipped" },
+        { name: "Dart", level: "Expert", note: "Async, Streams, Generics, Isolate Multithreading" },
         { name: "Kotlin (Jetpack Compose)", level: "Advanced", note: "Native Android & Platform Channels" },
-        { name: "JavaScript / TypeScript", level: "Advanced", note: "Web & Tooling" },
-        { name: "Python / FastAPI", level: "Advanced", note: "Backend APIs & AI Scripts" }
+        { name: "Native iOS / Swift Interop", level: "Advanced", note: "Platform Method Channels & Modules" },
+        { name: "White-Label & Flavor Engine", level: "Expert", note: "299 apps from 1 unified codebase" },
+        { name: "BLoC & Clean Architecture", level: "Expert", note: "Enterprise event-driven state" }
       ]
     },
     {
-      name: "Architecture & State Management",
-      description: "Battle-tested architectural patterns designed for long-term scalability and zero tech debt.",
+      name: "Full-Stack Web & Desktop Systems",
+      description: "Modern web architectures, responsive frontend frameworks, and cross-platform desktop software.",
       skills: [
-        { name: "BLoC Pattern", level: "Expert", note: "Event-driven reactive architecture" },
-        { name: "White-Label & Flavor Config", level: "Expert", note: "299 apps from 1 codebase" },
-        { name: "Clean Architecture & MVVM", level: "Expert", note: "Separation of concerns" },
-        { name: "Provider & GetX", level: "Expert", note: "Rapid reactive state" },
-        { name: "Stacked Architecture", level: "Advanced", note: "Structured business logic" },
-        { name: "Feature-First Architecture", level: "Expert", note: "Modular maintainability" }
+        { name: "React & Next.js", level: "Advanced", note: "SSR, App Router, Full-Stack Web Apps" },
+        { name: "TypeScript & JavaScript", level: "Expert", note: "Type-safe Web & Full-Stack Tooling" },
+        { name: "Flutter Desktop (macOS / Windows / Linux)", level: "Expert", note: "Cross-Platform Native Desktop Software" },
+        { name: "Flutter Web", level: "Expert", note: "Unified Web Portals & Dashboards" },
+        { name: "Tailwind CSS & Modern UI", level: "Expert", note: "Pixel-Perfect, Responsive UIs" },
+        { name: "REST APIs & GraphQL", level: "Expert", note: "High-Throughput Endpoint Design" }
       ]
     },
     {
-      name: "Backend, Realtime & Storage",
-      description: "Cloud backends, persistent local engines, and ultra-low latency real-time communication.",
+      name: "Backend, Cloud & Database Systems",
+      description: "Scalable backend microservices, real-time protocols, serverless infrastructure, and persistent engines.",
       skills: [
-        { name: "Firebase (Auth, Firestore, FCM)", level: "Expert", note: "Scalable cloud services" },
-        { name: "WebSockets & Socket.IO", level: "Expert", note: "Bidirectional live updates" },
-        { name: "REST APIs & JSON", level: "Expert", note: "High-throughput endpoints" },
-        { name: "Hive & SQLite / SQFLite", level: "Expert", note: "Blazing fast local persistence" },
-        { name: "DataDog Monitoring", level: "Advanced", note: "APM & crash telemetry" }
+        { name: "Node.js & Express", level: "Advanced", note: "RESTful Services & Middleware" },
+        { name: "Python / FastAPI", level: "Advanced", note: "High-Performance APIs & AI Services" },
+        { name: "Firebase Suite", level: "Expert", note: "Auth, Firestore, Cloud Functions, FCM, Remote Config" },
+        { name: "Supabase & PostgreSQL", level: "Advanced", note: "Relational DBs, Realtime & Row Security" },
+        { name: "WebSockets & Socket.IO", level: "Expert", note: "Bi-directional Real-Time Channels" },
+        { name: "Hive, SQLite & Local Storage", level: "Expert", note: "High-Speed Encrypted Local Persistence" }
       ]
     },
     {
       name: "DevOps, CI/CD & Store Release",
-      description: "Full-lifecycle release automation pipelines directly to Google Play and Apple App Store.",
+      description: "Automated batch release matrix pipelines, containerization, and store compliance operations.",
       skills: [
-        { name: "Fastlane Automation", level: "Expert", note: "Batch build & deploy matrix" },
+        { name: "Fastlane Automation", level: "Expert", note: "Batch build & store upload matrix" },
         { name: "Google Play Console", level: "Expert", note: "Tracks, AABs, policy compliance" },
         { name: "Apple App Store Connect", level: "Expert", note: "Certificates, provisioning, TestFlight" },
-        { name: "GitHub Actions", level: "Advanced", note: "Automated linting & build CI" },
-        { name: "Unit & Widget Testing", level: "Advanced", note: "Mockito, bloc_test" }
+        { name: "GitHub Actions CI/CD", level: "Advanced", note: "Automated lint, test & deployment pipelines" },
+        { name: "DataDog & Crashlytics", level: "Expert", note: "APM, crash telemetry & 99.9% uptime" },
+        { name: "Unit & Widget Testing", level: "Advanced", note: "Mockito, bloc_test, TDD workflows" }
       ]
     },
     {
-      name: "Applied AI & Integrations",
-      description: "Modern AI APIs, payment processors, maps, and third-party developer integrations.",
+      name: "Applied AI & Third-Party Integrations",
+      description: "Generative AI APIs, streaming LLMs, payments, maps, and modern developer productivity.",
       skills: [
-        { name: "Groq AI API / LLM Integration", level: "Expert", note: "Ultra-fast streaming models" },
-        { name: "Google Gemini API", level: "Advanced", note: "Multimodal & reasoning models" },
-        { name: "Stripe / Apple Pay / Google Pay", level: "Expert", note: "Mobile checkout pipelines" },
-        { name: "Google Maps SDK", level: "Advanced", note: "Custom overlays & geolocation" },
-        { name: "OneSignal Push Notifications", level: "Expert", note: "Automated broadcast segments" },
+        { name: "Groq AI API / Fast LLM Inference", level: "Expert", note: "Sub-second 800+ tok/s streaming" },
+        { name: "Google Gemini API", level: "Advanced", note: "Multimodal reasoning & system prompts" },
+        { name: "Stripe / Apple Pay / Google Pay", level: "Expert", note: "Seamless checkout & payment pipelines" },
+        { name: "Google Maps SDK", level: "Advanced", note: "Custom overlays, routing & geolocation" },
+        { name: "OneSignal Push Notifications", level: "Expert", note: "Automated segmented broadcasts" },
         { name: "AI-Assisted Workflow", level: "Expert", note: "Claude, Cursor, Antigravity, Copilot" }
       ]
     }
@@ -435,10 +438,10 @@ export const PORTFOLIO_DATA = {
 
   suggestedQuestions: [
     "Who is Shabbir Hussain?",
+    "Can Shabbir build me a full-stack webapp?",
+    "Can he build desktop applications?",
     "How did he build 299 apps from 1 codebase?",
-    "What are his strongest Flutter & AI skills?",
-    "Tell me about his work at F-Tech Solution",
-    "Is Shabbir available for full-time or contract roles?",
-    "How can I contact or schedule an interview with him?"
+    "Is he an expert in Firebase and Cloud Backends?",
+    "How can I hire Shabbir or build a system with him?"
   ]
 };

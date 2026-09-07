@@ -21,7 +21,7 @@ export function SkillsMatrix() {
           <span className="text-gradient-cyan">Architecture Stack</span>
         </h2>
         <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-          From reactive Flutter state engines and native Kotlin bridges to Fastlane automation and Groq streaming LLMs.
+          From enterprise Flutter mobile architecture to full-stack React/Next.js web apps, cross-platform desktop software, and cloud backend microservices.
         </p>
       </div>
 

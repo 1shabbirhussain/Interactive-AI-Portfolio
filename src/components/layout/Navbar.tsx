@@ -67,7 +67,7 @@ export function Navbar({ onOpenAI, onOpenCommand }: NavbarProps) {
               <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#06b6d4] animate-pulse" />
             </div>
             <div className="text-[11px] font-medium text-slate-400 font-mono">
-              Senior Flutter & AI Architect
+              Senior Full-Stack & Mobile Architect
             </div>
           </div>
         </a>

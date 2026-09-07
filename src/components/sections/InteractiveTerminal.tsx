@@ -2,8 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, CornerDownLeft, Sparkles, Check } from 'lucide-react';
-import { PORTFOLIO_DATA } from '@/data/portfolio';
+import { Terminal, CornerDownLeft } from 'lucide-react';
 
 interface CommandOutput {
   command: string;
@@ -18,11 +17,14 @@ export function InteractiveTerminal({ onOpenAI }: { onOpenAI: () => void }) {
       response: 'Welcome to Shabbir Hussain v2.0 interactive terminal. Type "help" or click any quick command below.',
     },
   ]);
-  const terminalEndRef = useRef<HTMLDivElement | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (history.length > 1) {
-      terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (history.length > 1 && scrollRef.current) {
+      scrollRef.current.scrollTo({
+        top: scrollRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
     }
   }, [history]);
 
@@ -39,10 +41,13 @@ export function InteractiveTerminal({ onOpenAI }: { onOpenAI: () => void }) {
               • <span className="font-bold">about</span> : Summary of Shabbir's engineering background
             </div>
             <div className="text-cyan-300">
+              • <span className="font-bold">systems</span> : End-to-end full-stack web, mobile & desktop capabilities
+            </div>
+            <div className="text-cyan-300">
               • <span className="font-bold">299apps</span> : Architectural breakdown of 299 apps from 1 codebase
             </div>
             <div className="text-cyan-300">
-              • <span className="font-bold">skills</span> : Key technologies & state patterns
+              • <span className="font-bold">skills</span> : Key technologies, web frameworks & cloud stack
             </div>
             <div className="text-cyan-300">
               • <span className="font-bold">projects</span> : List top featured applications
@@ -60,17 +65,22 @@ export function InteractiveTerminal({ onOpenAI }: { onOpenAI: () => void }) {
         );
         break;
       case 'about':
-        res = `Shabbir Hussain — Senior Flutter Engineer with 3+ years experience. Graduated with Distinction (CGPA 3.5/4.0) from UBIT, University of Karachi. Top 10 Winner at Saylani Devathon Summit 1.0. Specialist in enterprise Flutter migration and scalable white-label engines.`;
+        res = `Shabbir Hussain — Senior Full-Stack & Cross-Platform Engineer with 3+ years experience. Graduated with Distinction (CGPA 3.5/4.0) from UBIT, University of Karachi. Top 10 Winner at Saylani Devathon Summit 1.0. Architected 299 apps from 1 codebase at Avialdo and enterprise native migrations at F-Tech. Builds custom production systems across Mobile, Web, Desktop & Cloud.`;
+        break;
+      case 'systems':
+      case 'fullstack':
+      case 'web':
+        res = `Full-Stack System Engineering: Shabbir builds complete, production-grade systems end-to-end:\n• Web Apps: React, Next.js (App Router, SSR), TypeScript, Tailwind CSS\n• Desktop Software: Cross-platform macOS, Windows, Linux via Flutter Desktop\n• Mobile Apps: Flutter (iOS/Android), Kotlin Compose, native method channels\n• Backend & Cloud: Node.js, Python / FastAPI, Firebase, Supabase, PostgreSQL, WebSockets\n• Applied AI: Sub-second Groq streaming LLMs & Gemini multimodal reasoning\nIf you came to build a product or system, we can architect and ship it together!`;
         break;
       case '299apps':
       case 'whitelabel':
-        res = `Linked Union Case Study: Shabbir architected a single Flutter codebase utilizing BLoC and runtime flavor injection that compiles 299 separate Android & iOS labor union apps. Automated batch deployment via Fastlane CI/CD reduced manual release overhead by 85%.`;
+        res = `Linked Union Case Study: Shabbir architected a single Flutter codebase utilizing BLoC and runtime flavor injection that compiles 299 separate Android & iOS labor union apps. Automated batch deployment via Fastlane CI/CD reduced manual release overhead by 85% with 98% code reuse.`;
         break;
       case 'skills':
-        res = `Languages: Dart, Flutter, Kotlin, Jetpack Compose, Python, FastAPI, JavaScript, TypeScript\nState & Architecture: BLoC, Clean Arch, MVVM, Provider, GetX, Stacked\nRealtime/Backend: WebSockets, Firebase, Hive, DataDog\nDevOps: Fastlane, GitHub Actions, Play Store, App Store Connect`;
+        res = `Mobile: Flutter, Dart, Kotlin, Swift Interop, BLoC, Clean Architecture\nWeb & Desktop: React, Next.js, TypeScript, Flutter Desktop (macOS/Win/Linux), Tailwind CSS\nBackend & Cloud: Node.js, Python / FastAPI, Firebase Suite, Supabase, PostgreSQL, WebSockets\nDevOps & AI: Fastlane, GitHub Actions, Groq API (800+ tok/s), Google Gemini, DataDog APM`;
         break;
       case 'projects':
-        res = `1. Linked Union (299 Labor Union Apps)\n2. QnE Grocery Store (Play Store & App Store Live)\n3. Islamic Speeches (F-Tech Enterprise Native Migration)\n4. Gathr (Socket.IO + Stripe)\n5. AI Event Planner (Groq LLM Powered)`;
+        res = `1. Linked Union (299 Labor Union Apps from 1 Codebase)\n2. QnE Grocery Store (Play Store & App Store Live)\n3. Islamic Speeches (F-Tech Enterprise Native Migration, 50K+ downloads)\n4. Gathr (Socket.IO + Stripe + Maps)\n5. AI Event Planner (Groq LLM Powered Full-Stack Concierge)`;
         break;
       case 'contact':
         res = `Email: 001.shabbirhussain@gmail.com\nWhatsApp/Phone: +92-347-8356631\nLinkedIn: linkedin.com/in/shabbir-hussain-445338228\nGitHub: github.com/1shabbirhussain`;
@@ -121,7 +131,10 @@ export function InteractiveTerminal({ onOpenAI }: { onOpenAI: () => void }) {
         </div>
 
         {/* Terminal Body */}
-        <div className="p-5 font-mono text-xs sm:text-sm text-slate-300 space-y-3 max-h-72 overflow-y-auto">
+        <div 
+          ref={scrollRef}
+          className="p-5 font-mono text-xs sm:text-sm text-slate-300 space-y-3 max-h-72 overflow-y-auto"
+        >
           {history.map((h, i) => (
             <div key={i} className="space-y-1.5">
               <div className="flex items-center gap-2 text-cyan-400">
@@ -133,13 +146,12 @@ export function InteractiveTerminal({ onOpenAI }: { onOpenAI: () => void }) {
               </div>
             </div>
           ))}
-          <div ref={terminalEndRef} />
         </div>
 
         {/* Quick Command Chips */}
         <div className="px-5 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex flex-wrap items-center gap-2 text-xs font-mono">
           <span className="text-slate-400 text-[11px]">Quick Run:</span>
-          {['help', '299apps', 'skills', 'projects', 'contact', 'chat'].map((cmd) => (
+          {['help', 'systems', '299apps', 'skills', 'projects', 'contact', 'chat'].map((cmd) => (
             <button
               key={cmd}
               onClick={() => executeCommand(cmd)}
@@ -158,7 +170,7 @@ export function InteractiveTerminal({ onOpenAI }: { onOpenAI: () => void }) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Type a command (e.g. 299apps, skills, chat)..."
+            placeholder="Type a command (e.g. systems, 299apps, skills, chat)..."
             className="flex-1 bg-transparent text-slate-100 placeholder-slate-600 text-xs sm:text-sm font-mono focus:outline-none"
           />
           <button

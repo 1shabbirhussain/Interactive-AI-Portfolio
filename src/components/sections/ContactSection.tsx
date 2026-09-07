@@ -48,7 +48,7 @@ export function ContactSection() {
           <span className="text-gradient-cyan">Exceptional Together?</span>
         </h2>
         <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-          Open for full-time Senior Flutter / Mobile Architect positions (Remote & Relocation) and high-impact advisory/engineering contracts.
+          Open for Senior Full-Stack & Mobile Engineering roles (Remote & Global Relocation) as well as end-to-end product development contracts across Mobile, Web, Desktop, and Cloud Systems.
         </p>
       </div>
 

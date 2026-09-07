@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Layers, Smartphone, Cpu, ShieldCheck, Sparkles, Award, ArrowUpRight } from 'lucide-react';
+import { Layers, Smartphone, Cpu, Globe, Award } from 'lucide-react';
 import { PORTFOLIO_DATA } from '@/data/portfolio';
 
 export function About() {
@@ -12,28 +12,28 @@ export function About() {
       icon: Layers,
       color: "cyan",
       description: "At Avialdo Solutions, I architected a unified Flutter codebase serving 299 distinct US labor union apps (Teamsters 688, IUOE, TSS) using reactive BLoC, flavor-based theming, and Fastlane CI/CD automation. This eliminated per-client codebases and achieved 98% code reuse across Android & iOS.",
-      tag: "Architectural Scalability"
+      tag: "Mobile Architecture"
+    },
+    {
+      title: "End-to-End Web & Desktop Engineering",
+      icon: Globe,
+      color: "blue",
+      description: "Beyond mobile, I build high-performance web applications with React, Next.js, TypeScript, and Tailwind CSS, as well as cross-platform desktop software with Flutter Desktop. Backed by Node.js, Python/FastAPI, Firebase, and PostgreSQL, I engineer complete custom systems from UI to cloud infrastructure.",
+      tag: "Full-Stack & Desktop"
     },
     {
       title: "Zero-Downtime Enterprise Migration",
       icon: Smartphone,
-      color: "blue",
+      color: "purple",
       description: "At F-Tech Solution, I lead the enterprise native-to-Flutter transition by embedding modular Flutter viewports incrementally into existing production apps. This delivers modern UI responsiveness and rapid release velocity without breaking legacy infrastructure.",
       tag: "Migration Engineering"
     },
     {
-      title: "Applied AI & Real-Time Telemetry",
+      title: "Applied AI & Real-Time Observability",
       icon: Cpu,
       color: "violet",
-      description: "Pioneering applied generative AI in mobile with sub-second streaming inference via Groq LLMs and Gemini. Combined with WebSockets, OneSignal push segmentation, and DataDog telemetry for 99.9% crash-free production stability.",
-      tag: "AI & Observability"
-    },
-    {
-      title: "Rigorous Academic & Competitive Pedigree",
-      icon: Award,
-      color: "emerald",
-      description: "Graduated with Distinction (CGPA 3.5/4.0) in BS Software Engineering from UBIT, University of Karachi. Top 10 winner among 70 competitive engineering teams at Saylani Devathon Summit 1.0, awarded a high-performance laptop for winning technical execution.",
-      tag: "Proven Distinction"
+      description: "Pioneering applied generative AI with sub-second streaming inference via Groq LLMs and Gemini multimodal reasoning. Combined with WebSockets, OneSignal push segmentation, and DataDog telemetry for 99.9% crash-free production stability.",
+      tag: "AI & Telemetry"
     }
   ];
 
@@ -42,7 +42,6 @@ export function About() {
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider">
-          <Sparkles className="h-3.5 w-3.5" />
           <span>Engineering DNA</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
@@ -50,7 +49,7 @@ export function About() {
           <span className="text-gradient-cyan">Not Just Writing Code</span>
         </h2>
         <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-          I bridge the gap between pixel-perfect mobile aesthetics, industrial-scale multi-flavor architecture, and next-generation applied artificial intelligence.
+          I bridge the gap between industrial-scale cross-platform architecture, modern full-stack web & desktop engineering, and next-generation applied artificial intelligence.
         </p>
       </div>
 

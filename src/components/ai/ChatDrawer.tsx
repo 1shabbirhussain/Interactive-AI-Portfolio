@@ -16,7 +16,7 @@ export function ChatDrawer({ isOpen, onClose }: ChatDrawerProps) {
     {
       id: 'init-1',
       role: 'assistant',
-      content: `Hello! I am **Shabbir Hussain's AI Digital Representative**.\n\nI can answer any question regarding his **3+ years of production experience**, how he architected **299 apps from 1 codebase at Avialdo**, his **native-to-Flutter enterprise migrations at F-Tech**, technical skills, or hiring availability.\n\nWhat would you like to explore?`,
+      content: `Hello! I am **Shabbir Hussain's AI Digital Representative**.\n\nI can answer any questions about his **3+ years of production experience**, how he architected **299 apps from 1 unified codebase at Avialdo**, his enterprise migrations at F-Tech, and his full-stack capabilities across **Mobile, Web, Desktop, Cloud Backends & Applied AI**.\n\nIf you have a product or system you want to build, ask me how Shabbir can architect and ship it with you!`,
     },
   ]);
   const [input, setInput] = useState('');
@@ -97,7 +97,7 @@ export function ChatDrawer({ isOpen, onClose }: ChatDrawerProps) {
             ? {
                 ...m,
                 content:
-                  "I encountered a momentary connectivity glitch. Shabbir is a **Senior Flutter Engineer with 3+ years experience** who architected 299 apps from 1 codebase at Avialdo Solutions and leads enterprise native-to-Flutter migrations at F-Tech Solution.\n\nYou can reach him directly at **001.shabbirhussain@gmail.com** or WhatsApp **+92-347-8356631**.",
+                  "I encountered a momentary connectivity glitch. Shabbir is a **Senior Full-Stack & Cross-Platform Engineer with 3+ years experience** who builds complete custom systems across Mobile (299+ apps from 1 codebase), Full-Stack Web, Desktop, and Cloud Backends.\n\nYou can reach him directly at **001.shabbirhussain@gmail.com** or WhatsApp **+92-347-8356631** to discuss your project.",
               }
             : m
         )
@@ -112,7 +112,7 @@ export function ChatDrawer({ isOpen, onClose }: ChatDrawerProps) {
       {
         id: `init-${Date.now()}`,
         role: 'assistant',
-        content: `Chat session reset! Ask me anything about Shabbir's production apps, architecture, or skills.`,
+        content: `Chat session reset! Ask me anything about building custom systems, full-stack web/mobile/desktop apps, or Shabbir's architecture.`,
       },
     ]);
   };
@@ -150,7 +150,7 @@ export function ChatDrawer({ isOpen, onClose }: ChatDrawerProps) {
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-bold text-white">Shabbir AI Agent</span>
                     <span className="px-1.5 py-0.5 rounded text-[10px] bg-cyan-500/20 text-cyan-300 font-mono">
-                      Groq Llama 3.3
+                      Groq AI Agent
                     </span>
                   </div>
                   <span className="text-[11px] text-emerald-400 font-mono flex items-center gap-1">
@@ -225,7 +225,7 @@ export function ChatDrawer({ isOpen, onClose }: ChatDrawerProps) {
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ask about Shabbir's 299-app architecture, skills, roles..."
+                  placeholder="Ask about building a webapp, desktop software, 299 apps, skills..."
                   disabled={isLoading}
                   className="flex-1 px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 focus:border-cyan-400 focus:outline-none text-white text-xs sm:text-sm placeholder-slate-500 font-sans"
                 />
